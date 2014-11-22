@@ -17,7 +17,8 @@ getinv <- function() inv
 list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-# If the inverse is already in cache, then it fetches it, otherwise it computes the inverse
+# This function evaluates if the inverse is already in cache, 
+#then it fetches it and returns the inverse , otherwise it computes the inverse and returns it
 cacheSolve <- function(x, ...) {
 inv <- x$getinv()
 if (!is.null(inv)) {
